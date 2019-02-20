@@ -24,7 +24,7 @@
     btn.layer.cornerRadius = CGRectGetWidth(btn.frame)/2;
     btn.layer.masksToBounds = YES;
     [btn addTarget:self action:@selector(handleCenter) forControlEvents:UIControlEventTouchUpInside];
-    btn.center = CGPointMake([UIScreen mainScreen].bounds.size.width/2, 0);
+//    btn.center = CGPointMake([UIScreen mainScreen].bounds.size.width/2, 0);
     
     [((UITabBarController*)tabbar)  configTabbarWithCtrls:@[[UIViewController new],
                                                             [UIViewController new],
