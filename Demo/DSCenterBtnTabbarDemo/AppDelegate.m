@@ -14,7 +14,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    DSCenterButtonTabbarController *tabbar = [[DSCenterButtonTabbarController alloc] initWithShowCenterButton:YES];
+    DSCenterButtonTabbarController *tabbar = [[DSCenterButtonTabbarController alloc] initWithShowCenterButton:NO];
     
     //设置中心按钮属性
     UIButton *btn = tabbar.centerButton;
@@ -24,7 +24,6 @@
     btn.layer.cornerRadius = CGRectGetWidth(btn.frame)/2;
     btn.layer.masksToBounds = YES;
     [btn addTarget:self action:@selector(handleCenter) forControlEvents:UIControlEventTouchUpInside];
-//    btn.center = CGPointMake([UIScreen mainScreen].bounds.size.width/2, 0);
     
     [((UITabBarController*)tabbar)  configTabbarWithCtrls:@[[UIViewController new],
                                                             [UIViewController new],

@@ -33,7 +33,7 @@
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
     
     //若点击的是中心按钮，则响应按钮事件
-    if( _centerButton ){
+    if( _centerButton && self.isHidden == NO){
         CGPoint newPoint = [self convertPoint:point toView:_centerButton];
         if ( [_centerButton pointInside:newPoint withEvent:event]) {
             return _centerButton;
